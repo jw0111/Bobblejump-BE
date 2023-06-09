@@ -36,7 +36,12 @@ public enum ResponseTemplateStatus {
     INVALID_PHONE(false, "유효하지 않은 전화번호입니다.", 3008),
 
 
-    BAD_REQUEST(false,  "잘못된 요청입니다.", 4000);
+    BAD_REQUEST(false,  "잘못된 요청입니다.", 4000),
+
+    /**
+     * 5000 : 커뮤니티 오류
+     * */
+    NO_POST(false, "존재하지 않는 게시글입니다.", 5000);
 
     private final boolean isSuccess;
     private final int code;

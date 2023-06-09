@@ -5,4 +5,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface HeartsRepository extends JpaRepository<Hearts, Long> {
+    Boolean existsByPost_PostIdAndUser_UserId(Long postId, Long userId);
+    int countByPost_PostId(Long postId);
 }

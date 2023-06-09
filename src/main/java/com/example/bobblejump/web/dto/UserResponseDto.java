@@ -3,9 +3,7 @@ package com.example.bobblejump.web.dto;
 import com.example.bobblejump.domain.user.Role;
 import com.example.bobblejump.domain.user.User;
 import lombok.Getter;
-import org.springframework.cglib.core.Local;
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Getter
