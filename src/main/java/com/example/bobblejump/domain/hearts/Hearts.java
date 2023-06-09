@@ -1,4 +1,4 @@
-package com.example.bobblejump.domain.like;
+package com.example.bobblejump.domain.hearts;
 
 import com.example.bobblejump.BaseTimeEntity;
 import com.example.bobblejump.domain.post.Post;
@@ -12,9 +12,10 @@ import org.hibernate.annotations.DynamicInsert;
 @Entity
 @NoArgsConstructor
 @DynamicInsert
-public class Like extends BaseTimeEntity {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long likeId;
+public class Hearts extends BaseTimeEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long HeartsId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userId")

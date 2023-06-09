@@ -23,7 +23,7 @@ public class User extends BaseTimeEntity {
 
     private int level;
 
-    private int character;
+    private int player;
 
     @Enumerated(EnumType.STRING)
     @Setter
@@ -35,7 +35,7 @@ public class User extends BaseTimeEntity {
         this.userPwd = userPwd;
         this.userEmail = userEmail;
         this.level = 1;
-        this.character = 0;
+        this.player = 0;
         this.role = role;
     }
 }
