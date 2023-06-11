@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+
 import static com.example.bobblejump.response.ResponseTemplateStatus.*;
 
 @RequiredArgsConstructor
@@ -49,5 +51,9 @@ public class UserService {
         User user = userRepository.findById(userId).orElseThrow(() -> new ResponseException(NO_USER));
         user.setScore(score);
         return;
+    }
+
+    public List<User> loadAll() throws ResponseException {
+        return userRepository.findAll();
     }
 }

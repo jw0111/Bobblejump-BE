@@ -34,7 +34,7 @@ public class User extends BaseTimeEntity {
         this.userName = userName;
         this.userPwd = userPwd;
         this.userEmail = userEmail;
-        this.score = 1;
+        this.score = 0;
         this.player = 0;
         this.role = role;
     }

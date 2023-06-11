@@ -1,5 +1,6 @@
 package com.example.bobblejump.web;
 
+import com.example.bobblejump.domain.user.User;
 import com.example.bobblejump.response.ResponseException;
 import com.example.bobblejump.response.ResponseTemplate;
 import com.example.bobblejump.service.UserService;
@@ -8,6 +9,8 @@ import com.example.bobblejump.web.dto.UserResponseDto;
 import com.example.bobblejump.web.dto.UserSaveDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -36,6 +39,11 @@ public class UserController {
     public ResponseTemplate<String> saveScore(@PathVariable Long userId, @PathVariable int score) throws ResponseException {
         userService.saveScore(userId, score);
         return new ResponseTemplate<>("점수 저장에 성공했습니다.");
+    }
+
+    @GetMapping("/loadAll")
+    public ResponseTemplate<List<User>> loadAll() throws ResponseException{
+        return new ResponseTemplate<>(userService.loadAll());
     }
 }
 
