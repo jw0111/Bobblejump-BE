@@ -10,14 +10,14 @@ import java.time.LocalDateTime;
 public class UserResponseDto {
     String username;
     int character;
-    int level;
+    int score;
     Role role;
     LocalDateTime createdAt;
 
     public UserResponseDto(User entity){
         this.username = entity.getUserName();
         this.character = entity.getPlayer();
-        this.level = entity.getLevel();
+        this.score = entity.getScore();
         this.role = entity.getRole();
         this.createdAt = entity.getCreatedAt();
     }

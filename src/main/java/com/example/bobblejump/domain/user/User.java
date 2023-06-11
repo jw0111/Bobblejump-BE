@@ -21,7 +21,7 @@ public class User extends BaseTimeEntity {
 
     private String userEmail;
 
-    private int level;
+    private int score;
 
     private int player;
 
@@ -34,7 +34,7 @@ public class User extends BaseTimeEntity {
         this.userName = userName;
         this.userPwd = userPwd;
         this.userEmail = userEmail;
-        this.level = 1;
+        this.score = 1;
         this.player = 0;
         this.role = role;
     }
