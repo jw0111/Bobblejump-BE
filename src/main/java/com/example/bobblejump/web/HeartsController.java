@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("hearts")
+@CrossOrigin(originPatterns = "http://localhost:8080")
 public class HeartsController {
     private final HeartsService heartsService;
 
