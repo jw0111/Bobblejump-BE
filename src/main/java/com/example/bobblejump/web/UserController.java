@@ -31,6 +31,12 @@ public class UserController {
         UserResponseDto result = userService.loadUser(userId);
         return new ResponseTemplate<>(result);
     }
+
+    @PostMapping("/score/{userId}/{score}")
+    public ResponseTemplate<String> saveScore(@PathVariable Long userId, @PathVariable int score) throws ResponseException {
+        userService.saveScore(userId, score);
+        return new ResponseTemplate<>("점수 저장에 성공했습니다.");
+    }
 }
 
 

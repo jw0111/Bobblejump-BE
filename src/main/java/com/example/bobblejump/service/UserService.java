@@ -44,4 +44,10 @@ public class UserService {
         User user = userRepository.findById(userId).orElseThrow(() ->new ResponseException(NO_USER));
         return new UserResponseDto(user);
     }
+
+    public void saveScore(Long userId, int score) throws ResponseException {
+        User user = userRepository.findById(userId).orElseThrow(() -> new ResponseException(NO_USER));
+        user.setScore(score);
+        return;
+    }
 }
