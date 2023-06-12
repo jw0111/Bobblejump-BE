@@ -32,4 +32,9 @@ public class PostController {
     public ResponseTemplate<PostDetailResponseDto> loadPostDetail(@PathVariable Long userId, @PathVariable Long postId) throws ResponseException{
         return new ResponseTemplate<>(postService.loadPostDetail(userId, postId));
     }
+
+    @DeleteMapping("/delete/{postId}")
+    public ResponseTemplate<String> deletePost(@PathVariable Long postId) throws ResponseException{
+        return new ResponseTemplate<>(postService.deletePost(postId));
+    }
 }
